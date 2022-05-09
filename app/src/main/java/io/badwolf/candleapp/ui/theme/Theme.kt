@@ -13,7 +13,7 @@ private val DarkColorPalette = darkColors(
 )
 
 private val LightColorPalette = lightColors(
-    primary = Purple500,
+    primary = DarkBlue,
     primaryVariant = Purple700,
     secondary = Teal200
 
@@ -30,7 +30,8 @@ private val LightColorPalette = lightColors(
 @Composable
 fun CandleAppTheme(darkTheme: Boolean = isSystemInDarkTheme(), content: @Composable () -> Unit) {
     val colors = if (darkTheme) {
-        DarkColorPalette
+        LightColorPalette
+        //TODO create a dark theme
     } else {
         LightColorPalette
     }
