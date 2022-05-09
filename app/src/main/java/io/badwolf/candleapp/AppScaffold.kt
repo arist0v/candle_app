@@ -11,6 +11,7 @@ import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.compose.rememberNavController
 import androidx.compose.runtime.livedata.observeAsState
 import io.badwolf.candleapp.ui.menus.Drawer
+import io.badwolf.candleapp.ui.theme.MenuHeader
 import io.badwolf.candleapp.utils.BackPressHandler
 import io.badwolf.candleapp.utils.NavigationHost
 import kotlinx.coroutines.launch
@@ -33,7 +34,7 @@ fun AppScaffold(){
 
     val topBar: @Composable () -> Unit= {
         TopAppBar(
-            title= { Text(currentScreen!!.title) },
+            title= { Text(currentScreen!!.title, style = MenuHeader) },
             navigationIcon = {
                 IconButton(onClick = {
                     scope.launch {

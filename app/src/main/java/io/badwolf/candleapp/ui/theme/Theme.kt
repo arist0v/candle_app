@@ -43,3 +43,4 @@ fun CandleAppTheme(darkTheme: Boolean = isSystemInDarkTheme(), content: @Composa
         content = content
     )
 }
+

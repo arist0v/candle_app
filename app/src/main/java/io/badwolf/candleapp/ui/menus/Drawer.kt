@@ -14,16 +14,19 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import io.badwolf.candleapp.ui.drawerMenuItems
 import io.badwolf.candleapp.R
+import io.badwolf.candleapp.ui.theme.DarkBlue
+import io.badwolf.candleapp.ui.theme.MenuHeader
 
 @Composable
 fun Drawer(
-    modifier: Modifier = Modifier.background(color= Color.Blue),
+    modifier: Modifier = Modifier.background(color= DarkBlue),
     onDestinationClicked: (route: String) -> Unit){
     Column(
         modifier.fillMaxSize()
             .padding(top = 10.dp)){
         Text(stringResource(R.string.app_name),
-        modifier = Modifier
+            style = MenuHeader,
+            modifier = Modifier
             .padding(bottom = 10.dp)
             .align(alignment = Alignment.CenterHorizontally))
 
